@@ -108,7 +108,8 @@ def normalize(title, company, location, description, url, source, posted, employ
     return {
         "id": re.sub(r"[^a-z0-9]+", "-", (source + "-" + url).lower()).strip("-")[:120],
         "title": title, "company": company or "Employer not listed", "location": location or "India",
-        "description": description or "View the original listing for role details.",`r`n        "summary": (description[:237].rsplit(" ", 1)[0] + "…") if len(description) > 240 else description, "url": url,
+        "description": description or "View the original listing for role details.",
+        "summary": (description[:237].rsplit(" ", 1)[0] + "…") if len(description) > 240 else description, "url": url,
         "source": source, "postedAt": date.isoformat(), "employment": clean_text(employment),
         "workplace": clean_text(workplace), "salary": clean_text(salary),
         "experience": experience, "experienceMin": experience_min, "experienceMax": experience_max,
