@@ -108,7 +108,7 @@ def normalize(title, company, location, description, url, source, posted, employ
     return {
         "id": re.sub(r"[^a-z0-9]+", "-", (source + "-" + url).lower()).strip("-")[:120],
         "title": title, "company": company or "Employer not listed", "location": location or "India",
-        "description": description or "View the original listing for role details.", "url": url,
+        "description": description or "View the original listing for role details.",`r`n        "summary": (description[:237].rsplit(" ", 1)[0] + "…") if len(description) > 240 else description, "url": url,
         "source": source, "postedAt": date.isoformat(), "employment": clean_text(employment),
         "workplace": clean_text(workplace), "salary": clean_text(salary),
         "experience": experience, "experienceMin": experience_min, "experienceMax": experience_max,
@@ -127,7 +127,7 @@ def fetch_jooble(key):
                                {"Content-Type": "application/json"})
         for job in payload.get("jobs", []):
             normalized = normalize(job.get("title"), job.get("company"), job.get("location") or "India",
-                                   job.get("snippet") or job.get("description"), job.get("link"), "Jooble",
+                                   job.get("description") or job.get("snippet"), job.get("link"), "Jooble",
                                    job.get("updated") or job.get("date"), job.get("type"), "", job.get("salary"))
             if normalized:
                 rows.append(normalized)
@@ -143,7 +143,7 @@ def fetch_jobicy():
         if not (INDIA.search(geo) or ANYWHERE.search(geo)):
             continue
         location = geo or ("Remote · Worldwide" if remote else "")
-        summary = job.get("jobExcerpt") or job.get("jobDescription")
+        summary = job.get("jobDescription") or job.get("jobExcerpt")
         normalized = normalize(job.get("jobTitle"), job.get("companyName"), location, summary,
                                job.get("url"), "Jobicy", job.get("pubDate"),
                                ", ".join(job.get("jobType") or []), "Remote" if remote else "", "",
@@ -204,7 +204,7 @@ def fetch_himalayas():
                     pass
             normalized = normalize(
                 job.get("title"), job.get("companyName"), location,
-                job.get("excerpt") or job.get("description"),
+                job.get("description") or job.get("excerpt"),
                 job.get("applicationLink"), "Himalayas", published,
                 job.get("employmentType", ""), "Remote", salary, job.get("seniority", []),
             )
