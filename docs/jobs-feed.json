@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T11:03:17.271461+00:00",
+  "updatedAt": "2026-11-14T11:19:16.932468+00:00",
   "count": 25,
   "target": 25,
   "targetReached": true,
@@ -21,6 +21,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -35,6 +38,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "INR 2,000,000–2,500,000 annual",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -49,6 +55,9 @@
       "employment": "Contractor",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -63,6 +72,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "5+ years",
+      "experienceMin": 5,
+      "experienceMax": 99,
       "specialty": "Cybersecurity"
     },
     {
@@ -77,6 +89,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -91,6 +106,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -105,6 +123,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -119,6 +140,9 @@
       "employment": "Full-Time",
       "workplace": "",
       "salary": "",
+      "experience": "",
+      "experienceMin": null,
+      "experienceMax": null,
       "specialty": "Cybersecurity"
     },
     {
@@ -133,6 +157,9 @@
       "employment": "Part Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "5+ years",
+      "experienceMin": 5,
+      "experienceMax": 99,
       "specialty": "Cybersecurity"
     },
     {
@@ -147,6 +174,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "5+ years",
+      "experienceMin": 5,
+      "experienceMax": 99,
       "specialty": "Cybersecurity"
     },
     {
@@ -161,6 +191,9 @@
       "employment": "Contractor",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -175,6 +208,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "5+ years",
+      "experienceMin": 5,
+      "experienceMax": 99,
       "specialty": "Cybersecurity"
     },
     {
@@ -189,6 +225,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "USD 10,000–13,000 annual",
+      "experience": "0–1 years",
+      "experienceMin": 0,
+      "experienceMax": 1,
       "specialty": "Digital forensics"
     },
     {
@@ -203,6 +242,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "USD 10,000–13,000 annual",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Digital forensics"
     },
     {
@@ -217,6 +259,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "0–1 years",
+      "experienceMin": 0,
+      "experienceMax": 1,
       "specialty": "Cybersecurity"
     },
     {
@@ -231,6 +276,9 @@
       "employment": "Intern",
       "workplace": "Remote",
       "salary": "",
+      "experience": "Internship / fresher",
+      "experienceMin": 0,
+      "experienceMax": 0,
       "specialty": "Cybersecurity"
     },
     {
@@ -245,6 +293,9 @@
       "employment": "Contractor",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -259,6 +310,9 @@
       "employment": "Contractor",
       "workplace": "Remote",
       "salary": "",
+      "experience": "5+ years",
+      "experienceMin": 5,
+      "experienceMax": 99,
       "specialty": "Cybersecurity"
     },
     {
@@ -273,6 +327,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -287,6 +344,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -301,6 +361,9 @@
       "employment": "Contractor",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -315,6 +378,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -329,6 +395,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -343,6 +412,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -357,6 +429,9 @@
       "employment": "Full Time",
       "workplace": "Remote",
       "salary": "",
+      "experience": "2–5 years",
+      "experienceMin": 2,
+      "experienceMax": 5,
       "specialty": "Cybersecurity"
     }
   ]

@@ -46,7 +46,39 @@ def clean_text(value):
     return re.sub(r"\s+", " ", value).strip()
 
 
-def normalize(title, company, location, description, url, source, posted, employment="", workplace="", salary=""):
+def experience_band(seniority, description, employment=""):
+    level = clean_text(" ".join(seniority) if isinstance(seniority, list) else seniority).lower()
+    details = clean_text(description).lower()
+    explicit = re.search(r"\b(\d+)\s*(?:-|to)\s*(\d+)\s*(?:years?|yrs?)\b", details)
+    if explicit:
+        low, high = int(explicit.group(1)), int(explicit.group(2))
+        return low, high, f"{low}–{high} years"
+    explicit = re.search(r"\b(\d+)\s*\+\s*(?:years?|yrs?)\b", details)
+    if explicit:
+        low = int(explicit.group(1))
+        return low, 99, f"{low}+ years"
+    explicit = re.search(r"\b(?:at least|minimum of)\s*(\d+)\s*(?:years?|yrs?)\b", details)
+    if explicit:
+        low = int(explicit.group(1))
+        return low, 99, f"{low}+ years"
+    explicit = re.search(r"\b(\d+)\s*(?:years?|yrs?)\b", details)
+    if explicit:
+        years = int(explicit.group(1))
+        return years, years, f"{years} years"
+    if "intern" in level or "intern" in str(employment).lower():
+        return 0, 0, "Internship / fresher"
+    if any(word in level for word in ("entry", "graduate", "fresher")):
+        return 0, 1, "0–1 years"
+    if any(word in level for word in ("junior", "associate")):
+        return 0, 2, "0–2 years"
+    if "mid" in level:
+        return 2, 5, "2–5 years"
+    if any(word in level for word in ("senior", "manager", "director", "executive", "lead", "principal")):
+        return 5, 99, "5+ years"
+    return None, None, ""
+
+
+def normalize(title, company, location, description, url, source, posted, employment="", workplace="", salary="", seniority=""):
     title, company, location = clean_text(title), clean_text(company), clean_text(location)
     description, url = clean_text(description), str(url or "").strip()
     if not title or not url or not url.startswith(("https://", "http://")):
@@ -74,12 +106,14 @@ def normalize(title, company, location, description, url, source, posted, employ
         location = "Remote · Worldwide"
     if len(description) > 420:
         description = description[:417].rsplit(" ", 1)[0] + "…"
+    experience_min, experience_max, experience = experience_band(seniority, description, employment)
     return {
         "id": re.sub(r"[^a-z0-9]+", "-", (source + "-" + url).lower()).strip("-")[:120],
         "title": title, "company": company or "Employer not listed", "location": location or "India",
         "description": description or "View the original listing for role details.", "url": url,
         "source": source, "postedAt": date.isoformat(), "employment": clean_text(employment),
         "workplace": clean_text(workplace), "salary": clean_text(salary),
+        "experience": experience, "experienceMin": experience_min, "experienceMax": experience_max,
         "specialty": "Digital forensics" if FORENSICS.search(text) else "Cybersecurity",
     }
 
@@ -114,7 +148,8 @@ def fetch_jobicy():
         summary = job.get("jobExcerpt") or job.get("jobDescription")
         normalized = normalize(job.get("jobTitle"), job.get("companyName"), location, summary,
                                job.get("url"), "Jobicy", job.get("pubDate"),
-                               ", ".join(job.get("jobType") or []), "Remote" if remote else "", "")
+                               ", ".join(job.get("jobType") or []), "Remote" if remote else "", "",
+                               job.get("jobLevel", ""))
         if normalized:
             rows.append(normalized)
     return rows
@@ -173,7 +208,7 @@ def fetch_himalayas():
                 job.get("title"), job.get("companyName"), location,
                 job.get("excerpt") or job.get("description"),
                 job.get("applicationLink"), "Himalayas", published,
-                job.get("employmentType", ""), "Remote", salary,
+                job.get("employmentType", ""), "Remote", salary, job.get("seniority", []),
             )
             if normalized:
                 normalized["id"] = "himalayas-" + str(job.get("guid") or normalized["id"])
