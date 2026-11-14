@@ -104,8 +104,6 @@ def normalize(title, company, location, description, url, source, posted, employ
         location = (location + " · Remote worldwide").strip(" ·")
     elif "remote" in location.lower() and not INDIA.search(location) and ANYWHERE.search(place):
         location = "Remote · Worldwide"
-    if len(description) > 420:
-        description = description[:417].rsplit(" ", 1)[0] + "…"
     experience_min, experience_max, experience = experience_band(seniority, description, employment)
     return {
         "id": re.sub(r"[^a-z0-9]+", "-", (source + "-" + url).lower()).strip("-")[:120],
