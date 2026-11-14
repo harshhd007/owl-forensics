@@ -1,0 +1,26 @@
+{
+  "updatedAt": "2026-11-14T10:46:41.415939+00:00",
+  "count": 1,
+  "target": 25,
+  "targetReached": false,
+  "sources": [
+    "Jobicy"
+  ],
+  "sourceErrors": [],
+  "jobs": [
+    {
+      "id": "jobicy-https-jobicy-com-jobs-161678-linux-cryptography-and-security-engineer",
+      "title": "Linux Cryptography and Security Engineer",
+      "company": "Canonical",
+      "location": "Anywhere · Remote worldwide",
+      "description": "This is a unique opportunity to use your software engineering and cryptography skills to build and maintain the security foundation that enables Ubuntu and its users to operate securely and remain compliant to international information security standards such as FIPS 140-3 and Common Criteria. You will use your applied cryptography, Linux Security, and coding skills…",
+      "url": "https://jobicy.com/jobs/161678-linux-cryptography-and-security-engineer",
+      "source": "Jobicy",
+      "postedAt": "2026-11-12T16:52:13+00:00",
+      "employment": "Full-Time",
+      "workplace": "",
+      "salary": "",
+      "specialty": "Cybersecurity"
+    }
+  ]
+}
