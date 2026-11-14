@@ -4,9 +4,9 @@ The GitHub Actions workflow refreshes `jobs-feed.json` every day at 9:00 AM Indi
 
 ## India-specific listings
 
-The importer supports Jooble's India search API and supplements it with public feeds from Jobicy and Remote OK. It filters for forensic/cybersecurity roles, India locations, or explicitly worldwide/anywhere roles; it does not assume that an unspecified remote job is open to India. Each listing includes the source and original listing URL.
+The importer uses the public Himalayas remote-jobs API plus Jobicy and Remote OK feeds, and can also use Jooble's India search API when configured. It filters for forensic/cybersecurity roles, India locations, or explicitly worldwide/anywhere roles; it does not assume that an unspecified remote job is open to India. Each listing includes source credit and the allowed application URL.
 
-To enable the India-specific source:
+To add Jooble as another India source (optional):
 
 1. Create an API key from the India Jooble API page: <https://in.jooble.org/api/about>.
 2. In the GitHub repository, open **Settings → Secrets and variables → Actions → New repository secret**.

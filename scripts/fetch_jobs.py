@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "docs" / "jobs-feed.json"
 NOW = dt.datetime.now(dt.timezone.utc)
-SECURITY = re.compile(r"\b(cyber(?:security)?|information security|infosec|soc analyst|security analyst|security engineer|incident response|dfir|threat intelligence|penetration test|pen test|red team|blue team|digital forensics|computer forensics|mobile forensics|e[- ]discovery|forensic examiner|malware analyst|vulnerability analyst)\b", re.I)
+SECURITY = re.compile(r"\b(cyber(?:[ -]?security)?|information security|infosec|soc analyst|security (?:operations|analyst|engineer|researcher)|incident response|dfir|threat intelligence|penetration test(?:er|ing)?|pen test|red team|blue team|digital forensics|computer forensics|mobile forensics|e[- ]discovery|forensic examiner|malware analyst|vulnerability analyst)\b", re.I)
 FORENSICS = re.compile(r"\b(forensic|forensics|dfir|incident response|e[- ]discovery|digital evidence|computer forensics|mobile forensics)\b", re.I)
 INDIA = re.compile(r"\b(india|indian|bengaluru|bangalore|hyderabad|pune|mumbai|delhi|gurugram|gurgaon|noida|chennai|kolkata|ahmedabad|kochi|jaipur)\b", re.I)
 ANYWHERE = re.compile(r"\b(worldwide|anywhere|global|work from anywhere|remote worldwide)\b", re.I)
@@ -52,7 +52,10 @@ def normalize(title, company, location, description, url, source, posted, employ
     if not title or not url or not url.startswith(("https://", "http://")):
         return None
     text = f"{title} {description}"
-    if not SECURITY.search(text):
+    # Require the role title itself to be security/forensics-related; a generic
+    # marketing or sales role mentioning a security product in its description
+    # is not a security vacancy.
+    if not SECURITY.search(title):
         return None
     # Jobs must name India or be explicitly open worldwide/anywhere. Generic
     # "remote" posts are not assumed to accept applicants from India.
@@ -132,9 +135,56 @@ def fetch_remoteok():
     return rows
 
 
+def fetch_himalayas():
+    """Read Himalayas' public API and keep only posts eligible in India."""
+    queries = ["cybersecurity", "cyber security", "digital forensics", "forensic analyst",
+               "security analyst", "security engineer", "security operations", "SOC analyst",
+               "incident response", "DFIR", "penetration testing", "malware analyst",
+               "threat intelligence", "information security", "security specialist",
+               "cybersecurity analyst", "vulnerability analyst"]
+    rows = []
+    for term in queries:
+        params = urllib.parse.urlencode({"q": term, "country": "IN", "sort": "recent", "page": 1})
+        data = request_json("https://himalayas.app/jobs/api/search?" + params)
+        for job in data.get("jobs", []):
+            restrictions = job.get("locationRestrictions") or []
+            allowed = not restrictions or any(
+                (str(item.get("alpha2", "")).upper() == "IN" or "india" in str(item.get("name", "")).lower())
+                if isinstance(item, dict) else "india" in str(item).lower()
+                for item in restrictions
+            )
+            if not allowed:
+                continue
+            location = "Remote · Worldwide" if not restrictions else "Remote · India"
+            salary = ""
+            if job.get("minSalary") or job.get("maxSalary"):
+                low, high = job.get("minSalary"), job.get("maxSalary")
+                band = f"{low:,}" if low else ""
+                if high:
+                    band += ("–" if band else "") + f"{high:,}"
+                salary = " ".join(part for part in [job.get("currency", ""), band, job.get("salaryPeriod", "")] if part)
+            published = job.get("pubDate")
+            if published:
+                try:
+                    published = dt.datetime.fromtimestamp(float(published), dt.timezone.utc).isoformat()
+                except (ValueError, TypeError, OSError):
+                    pass
+            normalized = normalize(
+                job.get("title"), job.get("companyName"), location,
+                job.get("excerpt") or job.get("description"),
+                job.get("applicationLink"), "Himalayas", published,
+                job.get("employmentType", ""), "Remote", salary,
+            )
+            if normalized:
+                normalized["id"] = "himalayas-" + str(job.get("guid") or normalized["id"])
+                rows.append(normalized)
+    return rows
+
+
 def main():
     rows, errors = [], []
     for name, fetch in (("Jooble", lambda: fetch_jooble(os.getenv("JOOBLE_API_KEY", ""))),
+                        ("Himalayas", fetch_himalayas),
                         ("Jobicy", fetch_jobicy), ("Remote OK", fetch_remoteok)):
         try:
             rows.extend(fetch())
