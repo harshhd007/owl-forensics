@@ -1,14 +1,32 @@
 {
-  "updatedAt": "2026-11-14T12:18:00.264179+00:00",
-  "count": 25,
+  "updatedAt": "2026-11-15T11:16:28.894106+00:00",
+  "count": 24,
   "target": 25,
-  "targetReached": true,
+  "targetReached": false,
   "sources": [
     "Himalayas",
     "Jobicy"
   ],
   "sourceErrors": [],
   "jobs": [
+    {
+      "id": "himalayas-https://himalayas.app/companies/rustlabs/jobs/senior-software-security-engineer-ai-training-remote-3-months",
+      "title": "Senior Software Security Engineer, AI Training (Remote, 3 months)",
+      "company": "RustLabs",
+      "location": "Remote · India",
+      "description": "We're hiring senior software security engineers for a 3-month remote contract building security tasks that train and test frontier AI coding models. What you'll do Take real vulnerabilities (CVEs, security advisories, bug reports) from open-source projects and reproduce them Classify each one (CWE, OWASP Top 10) and write proof-of-vulnerability tests Build Docker-based audit-and-patch tasks in Python, JS/TS, Java, C/C++, C#, Go, Rust, Ruby, PHP, Kotlin or Swift Harden the tests so AI models can't game them, and score AI-written patches You need 5+ years of professional software engineering Expert in at least one of the languages above A strong grasp of CWE, CVE and the OWASP Top 10 Hands-on work with sanitizers, fuzzers or static analysis (CodeQL, Semgrep) Git, Linux, Bash and Docker Clear technical writing in English 40 hours a week, with 4 hours overlapping US Pacific time Pay and length $15 per hour Fully remote contract, 3 months, starts next week How to apply Click Apply and fill in our 2-minute form. A short interest form, an AI interview, then a technical interview. Experienced leads (6+ years, has run a small team) can apply through the same link and say so. Originally posted on Himalayas",
+      "summary": "We're hiring senior software security engineers for a 3-month remote contract building security tasks that train and test frontier AI coding models. What you'll do Take real vulnerabilities (CVEs, security advisories, bug reports) from…",
+      "url": "https://himalayas.app/companies/rustlabs/jobs/senior-software-security-engineer-ai-training-remote-3-months?utm_source=api",
+      "source": "Himalayas",
+      "postedAt": "2026-11-15T01:19:01+00:00",
+      "employment": "Contractor",
+      "workplace": "Remote",
+      "salary": "USD 15–15 hourly",
+      "experience": "5+ years",
+      "experienceMin": 5,
+      "experienceMax": 99,
+      "specialty": "Cybersecurity"
+    },
     {
       "id": "himalayas-https://himalayas.app/companies/teladoc-health/jobs/tier-1-cyber-security-operations-analyst",
       "title": "Tier 1 Cyber Security Operations Analyst",
@@ -422,42 +440,6 @@
       "experienceMin": 2,
       "experienceMax": 5,
       "specialty": "Digital forensics"
-    },
-    {
-      "id": "himalayas-https://himalayas.app/companies/kfc-global-careers/jobs/it-security-analyst-iii",
-      "title": "IT Security Analyst III",
-      "company": "KFC Global Careers",
-      "location": "Remote · India",
-      "description": "You will independently handle most platform engineering activities, troubleshoot technical issues involving multiple systems, support enterprise deployments and upgrades, improve platform processes and automation, and continuously strengthen the reliability and effectiveness of our Cortex environment. You will work closely with infrastructure, desktop engineering, cloud, application, security, global Brand, and technology partners to implement scalable security capabilities across a complex, global technology Originally posted on Himalayas",
-      "summary": "You will independently handle most platform engineering activities, troubleshoot technical issues involving multiple systems, support enterprise deployments and upgrades, improve platform processes and automation, and continuously…",
-      "url": "https://himalayas.app/companies/kfc-global-careers/jobs/it-security-analyst-iii?utm_source=api",
-      "source": "Himalayas",
-      "postedAt": "2026-11-01T08:19:47+00:00",
-      "employment": "Full Time",
-      "workplace": "Remote",
-      "salary": "",
-      "experience": "2–5 years",
-      "experienceMin": 2,
-      "experienceMax": 5,
-      "specialty": "Cybersecurity"
-    },
-    {
-      "id": "himalayas-https://himalayas.app/companies/pizza-hut/jobs/it-security-analyst-iii",
-      "title": "IT Security Analyst III",
-      "company": "Pizza Hut",
-      "location": "Remote · India",
-      "description": "You will independently handle most platform engineering activities, troubleshoot technical issues involving multiple systems, support enterprise deployments and upgrades, improve platform processes and automation, and continuously strengthen the reliability and effectiveness of our Cortex environment. You will work closely with infrastructure, desktop engineering, cloud, application, security, global Brand, and technology partners to implement scalable security capabilities across a complex, global technology Originally posted on Himalayas",
-      "summary": "You will independently handle most platform engineering activities, troubleshoot technical issues involving multiple systems, support enterprise deployments and upgrades, improve platform processes and automation, and continuously…",
-      "url": "https://himalayas.app/companies/pizza-hut/jobs/it-security-analyst-iii?utm_source=api",
-      "source": "Himalayas",
-      "postedAt": "2026-10-31T13:26:59+00:00",
-      "employment": "Full Time",
-      "workplace": "Remote",
-      "salary": "",
-      "experience": "2–5 years",
-      "experienceMin": 2,
-      "experienceMax": 5,
-      "specialty": "Cybersecurity"
     }
   ]
 }
