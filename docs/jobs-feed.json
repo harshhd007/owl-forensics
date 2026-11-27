@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-26T12:54:58.414889+00:00",
-  "count": 44,
+  "updatedAt": "2026-11-27T12:49:44.036712+00:00",
+  "count": 43,
   "target": 25,
   "targetReached": true,
   "sources": [
@@ -9,6 +9,24 @@
   ],
   "sourceErrors": [],
   "jobs": [
+    {
+      "id": "himalayas-https://himalayas.app/companies/owensminor/jobs/soc-analyst",
+      "title": "SOC Analyst",
+      "company": "Owens & Minor",
+      "location": "Remote · India",
+      "description": "Owens & Minor is a global healthcare solutions company providing essential products, services and technology solutions that support care delivery in leading hospitals, health systems and research centers around the world. For over 140 years, Owens & Minor has delivered comfort and confidence behind the scenes, so healthcare stays at the forefront, helping to make each day better for the hospitals, healthcare partners, and communities we serve. Powered by more than 14,000 teammates worldwide, Owens & Minor exists because every day, everywhere, Life Takes Care™. Global Reach with a Local Touch 140+ years serving healthcare Over 14,000 teammates worldwide Serving healthcare partners in 80 countries Manufacturing facilities in the U.S., Honduras, Mexico, Thailand and Ireland 40+ distribution centers Portfolio of 300 propriety and branded product offerings 1,000 branded medical product suppliers 4,000 healthcare partners served Job Description Job Description POSITION SUMMARY Owens & Minor is looking for a Senior SOC Analyst to investigate and respond to cyber threats. This position is the Level 2 escalation point for SOC Analysts and is responsible for in-depth investigation of escalated alerts, determining whether activity constitutes an incident, performing initial containment, and handing off confirmed incidents to Incident Response with complete context. This is a 24x7 shift environment and may require first, second, and third shift availability on weekdays, weekends, and holidays. ESSENTIAL JOB FUNCTIONS: Investigate alerts escalated by SOC Analysts and determine scope, impact, and whether they constitute an incident Perform initial containment actions (e.g., host isolation, account disablement, blocking indicators) following documented procedures Escalate confirmed and high-severity incidents to Incident Response with complete evidence, timeline, and context Review the quality and accuracy of SOC Analyst triage and escalations, and provide feedback Identify false positives and noisy detections and recommend tuning to Detection Engineering Generate scheduled and ad-hoc reports on investigations, trends, and SOC activity SUPPLEMENTAL JOB FUNCTIONS: Performs additional duties as directed. Effectively accomplishes set goals while primarily working in a remote capacity. Collaborate with peers, team leads, and other security teams on investigations and continuous improvement. Mentor SOC Analysts and Junior SOC Analysts on investigation techniques and tools. Act as shift point of contact in the absence of the SOC Lead when required. Qualifications EDUCATION & EXPERIENCE: 4-6 years of experience in Information Technology or Information Security At least 2 years of experience in a Security Operations Center or security monitoring role KNOWLEDGE SKILLS & ABILITIES: Strong understanding of the MITRE ATT&CK framework and its use in investigations Strong understanding of TCP/IP networking, ports, and protocols (DNS, HTTP/S, SMB, SMTP, TLS) and network traffic analysis Strong understanding of Windows and Linux/Unix platforms, Active Directory, process execution, auditing, and logging Strong understanding of SIEM log analysis and queries, and of EDR detections, process trees, and telemetry Experience with Rapid7 InsightIDR (SIEM) and CrowdStrike Falcon (EDR) is preferred Strong understanding of techniques to investigate phishing, credential theft, malware, ransomware, and suspicious user activity Ability to analyze email headers, URLs, and attachments, and to use sandboxes and threat intelligence sources Understanding of the incident response lifecycle (NIST SP 800-61) Ability to prioritize multiple active investigations and make sound decisions under pressure Strong analytical and critical observation skills Strong written and oral communication skills, including clear incident documentation Scripting skills (Python, PowerShell, Bash) are a plus Key Responsibilities: Perform in-depth investigations across SIEM, EDR, email, identity, network, and cloud data sources Build incident timelines and document findings, evidence, and actions in the case management system Execute and improve playbooks and SOPs based on lessons learned Perform threat-intelligence-driven searches for indicators of compromise across the environment Support Incident Response during major incidents with investigation and containment tasks Recommend detection improvements and automation opportunities Stay informed about emerging threats, vulnerabilities, and industry trends, and share relevant updates with the team ADDITIONAL REQUIREMENTS: Work closely with team members, IT staff, and other departments to address security concerns. Participate in SOC team meetings, training sessions, and exercises. Desired certifications: CompTIA CySA+, GIAC Certified Incident Handler (GCIH), Blue Team Level 2 (BTL2), or CrowdStrike CCFR. If you feel this opportunity could be the next step in your career, we encourage you to apply. This position will accept applications on an ongoing basis. Owens & Minor is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, national origin, sex, sexual orientation, genetic information, religion, disability, age, status as a veteran, or any other status prohibited by applicable national, federal, state or local law. Originally posted on Himalayas",
+      "summary": "Owens & Minor is a global healthcare solutions company providing essential products, services and technology solutions that support care delivery in leading hospitals, health systems and research centers around the world. For over 140…",
+      "url": "https://himalayas.app/companies/owensminor/jobs/soc-analyst?utm_source=api",
+      "source": "Himalayas",
+      "postedAt": "2026-11-26T18:09:53+00:00",
+      "employment": "Full Time",
+      "workplace": "Remote",
+      "salary": "",
+      "experience": "4–6 years",
+      "experienceMin": 4,
+      "experienceMax": 6,
+      "specialty": "Digital forensics"
+    },
     {
       "id": "himalayas-https://himalayas.app/companies/owensminor/jobs/junior-soc-analyst-1",
       "title": "Junior SOC Analyst-1",
@@ -61,24 +79,6 @@
       "experience": "0–1 years",
       "experienceMin": 0,
       "experienceMax": 1,
-      "specialty": "Cybersecurity"
-    },
-    {
-      "id": "himalayas-https://himalayas.app/companies/ford/jobs/saas-cyber-security-specialist",
-      "title": "SaaS Cyber Security Specialist",
-      "company": "Ford",
-      "location": "Remote · India",
-      "description": "Join Ford 's Enterprise Cyber Security SaaS Security team, a critical unit dedicated to safeguarding our extensive portfolio of Ford -managed SaaS solutions. We collaborate closely with various security and SaaS service teams to proactively identify, assess, and remediate security vulnerabilities within Ford -managed cloud-based applications. This team is at the forefront of enhancing Ford 's SaaS security posture by strategically identifying, onboarding, and integrating SaaS solutions with our security tools. A key aspect of this role involves developing, implementing, and managing robust security policies within cutting edge platforms such as AppOmni and Microsoft Defender for Cloud Apps (MDCA). The team is responsible for: Identifying, onboarding, and evaluating Ford -managed SaaS Solutions onto our security tools and functions to enhance security around our SaaS solutions. Developing and managing security policies in the following advanced security tools: AppOmni Microsoft Defender For Cloud Apps (MDCA) Originally posted on Himalayas",
-      "summary": "Join Ford 's Enterprise Cyber Security SaaS Security team, a critical unit dedicated to safeguarding our extensive portfolio of Ford -managed SaaS solutions. We collaborate closely with various security and SaaS service teams to…",
-      "url": "https://himalayas.app/companies/ford/jobs/saas-cyber-security-specialist?utm_source=api",
-      "source": "Himalayas",
-      "postedAt": "2026-11-25T23:11:56+00:00",
-      "employment": "Full Time",
-      "workplace": "Remote",
-      "salary": "",
-      "experience": "2–5 years",
-      "experienceMin": 2,
-      "experienceMax": 5,
       "specialty": "Cybersecurity"
     },
     {
@@ -782,24 +782,6 @@
       "experienceMin": 3,
       "experienceMax": 99,
       "specialty": "Cybersecurity"
-    },
-    {
-      "id": "himalayas-https://himalayas.app/companies/mercor/jobs/penetration-tester-upto-2150-part-time-7713873318",
-      "title": "Penetration Tester | Upto $2150 Part-time",
-      "company": "mercor",
-      "location": "Remote · India",
-      "description": "About the job Mercor connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include Benchmark , General Catalyst , Peter Thiel , Adam D'Angelo , Larry Summers , and Jack Dorsey . Position: Cybersecurity Expert Type: Contract Compensation: $1,750–$2,150 per completed task Location: Remote Role Responsibilities Review and evaluate AI-generated outputs related to threat analysis, vulnerability assessment, and security architecture recommendations. Create realistic scenarios based on cybersecurity workflows such as incident response runbooks, threat hunting queries, and penetration testing reports. Annotate, label, and validate data across cybersecurity use cases like CVE classification accuracy and SIEM alert triage . Provide structured feedback on AI accuracy in areas such as cybersecurity frameworks (NIST CSF, MITRE ATT&CK) and threat intelligence standards (STIX/TAXII). Collaborate asynchronously with research teams to refine evaluation frameworks for cybersecurity AI. Qualifications Must-Have 3+ years of professional experience in cybersecurity at an enterprise organization, MSSP, consultancy, or government/defense environment. Background in areas such as SOC analysis, incident response (DFIR), penetration testing, threat intelligence, or security architecture. Strong analytical thinking and ability to translate security operations into structured evaluation tasks. Clear written communication and attention to detail. Preferred Professional certifications like CISSP , CISM , CEH , OSCP , GIAC certifications , Security+ . Compensation & Legal Task Completion Pay: Competitive and based on task quality. Performance Bonus: Weekly bonus incentive for top performers. Hourly Opportunity: Transition to hourly compensation for sustained quality. Application Process (Takes 20–30 mins to complete) Upload resume AI interview based on your resume Submit form Resources & Support For details about the interview process and platform information, please check: For any help or support, reach out to: PS: Our team reviews applications daily. Please complete your AI interview and application steps to be considered for this opportunity. Originally posted on Himalayas",
-      "summary": "About the job Mercor connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include Benchmark , General Catalyst , Peter Thiel , Adam D'Angelo , Larry Summers , and Jack…",
-      "url": "https://himalayas.app/companies/mercor/jobs/penetration-tester-upto-2150-part-time-7713873318?utm_source=api",
-      "source": "Himalayas",
-      "postedAt": "2026-11-12T19:30:29+00:00",
-      "employment": "Full Time",
-      "workplace": "Remote",
-      "salary": "",
-      "experience": "3+ years",
-      "experienceMin": 3,
-      "experienceMax": 99,
-      "specialty": "Digital forensics"
     }
   ]
 }
